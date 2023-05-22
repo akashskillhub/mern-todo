@@ -9,10 +9,10 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.post("/todo/add", addTodo)
-app.get("/todo", getTodos)
-app.put("/todo/:id", updateTodo)
-app.delete("/todo/:id", deleteTodo)
+app.post("/api/todo/add", addTodo)
+app.get("/api/todo", getTodos)
+app.put("/api/todo/:id", updateTodo)
+app.delete("/api/todo/:id", deleteTodo)
 
 mongoose.connection.once("open", () => {
     console.log("DB Connected")
